@@ -14,10 +14,10 @@ class Pokecard extends Component {
         let pokecard_url = poke_images_url.replace("TBR",this.props["id"])
         return( //Remember to put the opening parenthesis next to the return() and not in a diff line
             <div className = "Pokecard" >
-                <h1>{this.props["name"]}</h1>
-                <img src = {pokecard_url} alt={pokemonName} />
-                <h1>Type: {this.props["type"]}</h1>
-                <h1>Exp: {this.props["base_experience"]}</h1>
+                <div className = "Pokecard-title"><h1>{this.props["name"]}</h1></div>
+                <div><img src = {pokecard_url} alt={pokemonName} /></div>
+                <div className = "Pokecard-data"><h1>Type: {this.props["type"]}</h1></div>
+                <div className = "Pokecard-data"><h1>Exp: {this.props["base_experience"]}</h1></div>
             </div>
         );
     }
